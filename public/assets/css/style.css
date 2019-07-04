@@ -1,0 +1,49 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+section {
+    background-image: url("/assets/images/Nachrichten.jpg");
+    border-radius: 0px;
+}
+
+#main {
+    border-radius: 0px;
+}
+
+#smain {
+    border-radius: 0px;
+}
+
+#title {
+    color: white;
+}
+
+#ptitle {
+    color: lightgray;
+}
+
+#pstitle {
+    color: lightgray;
+    font-size: 25px;
+}
+
+#btitle {
+    color: rgb(23, 13, 125);
+    font-weight: bold;
+}
+
+#links {
+    color: white;
+}
