@@ -2,7 +2,7 @@ var express = require("express");
 var expressHandlebars = require("express-handlebars");
 var mongoose = require("mongoose");
 
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 // Initialize Express
 var app = express();
@@ -25,9 +25,17 @@ app.set("view engine", "handlebars");
 require("./config/routes")(app);
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var MONGODB_URI = "mongodb://localhost/mongoHeadlines";
 
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+// Connect DB to Mongoose
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true }, function(error) {
+	if (error) {
+		console.log(error);
+	} else {
+		console.log("Mongoose Connection is Successful!")
+	}
+});
+mongoose.set('useCreateIndex', true);
 
 
 // Start the server

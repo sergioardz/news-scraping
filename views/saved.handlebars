@@ -15,21 +15,29 @@
     <div class="container">
         <div class="row">
             {{!-- Insert Each Here --}}
+            {{#each headline}}
             <div class="col-md-4">
                 <div class="card mb-4 shadow-sm">
                     <div class="card-body">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                        <a href={{this.url}} target="_blank"><h5 class="card-text">{{this.headline}}.</h5></a>
+                        <p class="sum">{{this.summary}}</p>
+                        <p class="date">{{this.date}}</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <button type="button" class="btn btn btn-info">Comment</button>
+                                <button type="button" class="btn btn btn-info m-2 btn-view-comments" data-id="{{this._id}}">Comments</button>
                             </div>
-                            <button type="button" class="btn btn btn-danger">Delete</button>
+                            <button type="button" class="btn btn btn-danger m-2 btn-remove" data-id="{{this._id}}">Delete</button>
                         </div>
                     </div>
                 </div>
             </div>
+            {{/each}}
             {{!-- End Each Here --}}
         </div>
+    </div>
+</div>
+<div class="modal fade">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content"></div>
     </div>
 </div>

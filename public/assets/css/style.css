@@ -47,3 +47,44 @@ section {
 #links {
     color: white;
 }
+
+.sum {
+    font-size: 12px;
+}
+
+.date {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.btn-view-comments, .btn-save {
+    font-size: 12px;
+}
+
+.btn-remove {
+    font-size: 12px;
+}
+
+.btn-save-comment, .btn-secondary {
+    font-size: 12px;
+}
+
+.btn-delete-comment {
+    font-size: 12px;
+}
+
+.notes {
+    font-size: 14px;
+}
+
+.notes, .btn-delete-comment {
+    float: left;
+}
+
+.modal-dialog{
+    overflow-y: initial;
+}
+.modal-body{
+    height: 350px;
+    overflow-y: auto;
+}
