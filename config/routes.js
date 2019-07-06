@@ -101,7 +101,7 @@ module.exports = function (app) {
 
     db.Headline.findByIdAndUpdate(id, {$set:{saved: true}})
       .then((dbHeadline) => {
-        console.log("updated");
+        // console.log("updated");
         // console.log(dbHeadline);
         res.json(dbHeadline);
       })

@@ -25,7 +25,7 @@ app.set("view engine", "handlebars");
 require("./config/routes")(app);
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var MONGODB_URI = "mongodb://localhost/mongoHeadlines";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
 // Connect DB to Mongoose
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true }, function(error) {
